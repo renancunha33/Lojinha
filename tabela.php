@@ -1,28 +1,28 @@
 <?php
-		include "conecta_mysql.inc";
-		
-		$reso = mysql_query("select * from cadastro");
+include "conecta_mysql.inc";
 
-		echo "<div id='tabela0' class='container-fluid'>
-		<table class='table table-striped table-bordered'>
-		<thead>
-		<tr >
+$reso = mysql_query("select * from cadastro");
 
-		<th>Nomes</th>
-		<th>Telefones</th>
-		<th>Endereços</th>
-		<th>Data nasc.</th>
+echo "<div id='tabela0' class='container-fluid'>
+<table class='table table-striped table-bordered'>
+<thead>
+<tr >
 
-		</tr>
-		</thead>"; 
+<th>Nomes</th>
+<th>Telefones</th>
+<th>Endereços</th>
+<th>Observações</th>
 
-		while($row = mysql_fetch_array($reso)){  
+</tr>
+</thead>"; 
 
-			$nome = "'".$row['nm_cadastro']."'"; 
+while($row = mysql_fetch_array($reso)){  
 
-			echo '<tr><td>' . $row['nm_cadastro'] . '</td><td>' . $row['tel_cadastro'] . '</td><td>' . $row['end_cadastro'] . '</td><td>' . $row['nasc_cadastro'] . '</td></tr>'; 
-		}
+	$nome = "'".$row['nm_cadastro']."'"; 
 
-		echo "</table></div>";
+	echo '<tr><td>' . $row['nm_cadastro'] . '</td><td>' . $row['tel_cadastro'] . '</td><td>' . $row['end_cadastro'] . '</td><td>' . $row['obs_cadastro'] . '</td></tr>'; 
+}
+
+echo "</table></div>";
 
 ?>
