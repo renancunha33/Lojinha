@@ -22,10 +22,18 @@ while($row = mysql_fetch_array($reso)){
 
 	echo '<tr><td>' . $row['nm_cadastro'] . '</td><td>' . $row['tel_cadastro'] . '</td><td>' . $row['end_cadastro'] . '</td><td>' . $row['obs_cadastro'] . '</td><td>
 	<form action="del.php">
-	<button type="submit" name="cd" value='.$cd.'>
+	<button type="submit" name="cd" value='.$row['cd_cadastro'].'>
 	Excluir
 	</button>
-	</form></td></tr>'; 
+	</form></td>
+	<td>
+	<form action="update.php">
+	<button type="submit" name="cd" value='.$row['cd_cadastro'].'>
+	Atualizar
+	</button>
+	</form></td>
+
+	</tr>'; 
 //mysql_query("delete * from cadastro where nm_cadastro = ".$row['nm_cadastro'])
 }
 
