@@ -5,7 +5,7 @@ $reso = mysql_query("select * from cadastro");
 
 echo "<div id='tabela0' class='container-fluid'>
 <table class='table table-striped table-bordered'>
-<thead>
+<thead class='thead-default'>
 <tr >
 
 <th>Nomes</th>
@@ -22,17 +22,16 @@ while($row = mysql_fetch_array($reso)){
 
 	echo '<tr><td>' . $row['nm_cadastro'] . '</td><td>' . $row['tel_cadastro'] . '</td><td>' . $row['end_cadastro'] . '</td><td>' . $row['obs_cadastro'] . '</td><td>
 	<form action="del.php">
-	<button type="submit" name="cd" value='.$row['cd_cadastro'].'>
+	<button type="submit" class="btn btn-danger btn-sm" name="cd" value='.$row['cd_cadastro'].'>
 	Excluir
 	</button>
 	</form></td>
 	<td>
 	<form action="update.php">
-	<button type="submit" name="cd" value='.$row['cd_cadastro'].'>
+	<button type="submit" class="btn btn-success btn-sm" name="cd" value='.$row['cd_cadastro'].'>
 	Atualizar
 	</button>
 	</form></td>
-
 	</tr>'; 
 //mysql_query("delete * from cadastro where nm_cadastro = ".$row['nm_cadastro'])
 }

@@ -18,7 +18,7 @@
 		<form name="form2">
 			Busca endereço por cep (opcional):
 			<input type="text" name="cep" id="cep"/>
-			<input type="submit" value="Buscar CEP" id="enviarr"/><br/>
+			<input type="submit" class="btn btn-primary btn-sm"value="Buscar CEP" id="enviarr"/><br/>
 		</form>
 
 		<center><h1>Cadastro base de clientes</h1>
@@ -28,7 +28,7 @@
 				<p>
 					<input id="end" type="text" class="form-control" name="Tendereco" placeholder="Endereco" value="">
 				</p>
-				<textarea type="text" rows="4" class="form-control" name="Tobs" placeholder="Observações"value=""></textarea><br/>
+				<textarea type="text" rows="3" class="form-control" name="Tobs" placeholder="Observações"value=""></textarea><br/>
 				<input type="submit" class='btn btn-lg btn-primary' id="enviar">
 			</form>
 		</center>
@@ -38,16 +38,10 @@
 		
 	</div>
 </body>
-<script type="text/javascript">
-$(document).ready(function(){
-
-});
-
-</script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-
+$('#tabela0').DataTable();
 	$("#enviarr").click(function(){
 			//recebe valor dos campos de texto
 			var cep = document.getElementsByName("cep")[0].value;
