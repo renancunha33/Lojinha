@@ -41,7 +41,6 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-$('#tabela0').DataTable();
 	$("#enviarr").click(function(){
 			//recebe valor dos campos de texto
 			var cep = document.getElementsByName("cep")[0].value;
