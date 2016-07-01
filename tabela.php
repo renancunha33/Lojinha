@@ -1,7 +1,8 @@
 <?php
+
 include "conecta_mysql.inc";
 
-$reso = mysql_query("select * from cadastro");
+$reso = mysqli_query($conexao, "select * from cadastro");
 
 echo "<div id='tabela0' class='container-fluid'>
 <table class='table table-striped table-bordered'>
@@ -16,11 +17,11 @@ echo "<div id='tabela0' class='container-fluid'>
 </tr>
 </thead>"; 
 
-while($row = mysql_fetch_array($reso)){  
+while($row = mysqli_fetch_array($reso)){  
 
 	$cd = "'".$row['cd_cadastro']."'"; 
 
-	echo '<tr><td>' . $row['nm_cadastro'] . '</td><td>' . $row['tel_cadastro'] . '</td><td>' . $row['end_cadastro'] . '</td><td>' . $row['obs_cadastro'] . '</td><td>
+	echo '<tr><td>' .$row['nm_cadastro']. '</td><td>' .$row['tel_cadastro']. '</td><td>' .$row['end_cadastro'] . '</td><td>' . $row['obs_cadastro']. '</td><td>
 	<form action="del.php">
 	<button type="submit" class="btn btn-danger btn-sm" name="cd" value='.$row['cd_cadastro'].'>
 	Excluir

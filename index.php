@@ -1,5 +1,6 @@
 <html>
 <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<link href="./bootstrap/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -41,6 +42,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+
 	$("#enviarr").click(function(){
 			//recebe valor dos campos de texto
 			var cep = document.getElementsByName("cep")[0].value;

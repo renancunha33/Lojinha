@@ -1,5 +1,6 @@
 <html>
 <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<link href="./bootstrap/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -21,9 +22,9 @@ include "conecta_mysql.inc";
 
 
 
-$reso = mysql_query("SELECT * FROM cadastro where cd_cadastro = ".$_GET['cd']."");
+$reso = mysqli_query($conexao,"SELECT * FROM cadastro where cd_cadastro = ".$_GET['cd']."");
 
-while($row = mysql_fetch_array($reso)){  
+while($row = mysqli_fetch_array($reso)){  
 
 echo'
 <div class="container">

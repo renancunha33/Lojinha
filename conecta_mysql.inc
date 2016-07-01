@@ -1,4 +1,4 @@
 <?php
-$conexao= mysql_connect("localhost","root","");
-mysql_select_db("Cadastro");
+$conexao = mysqli_connect("localhost","root","","cadastro");
+//mysql_select_db();
 ?>

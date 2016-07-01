@@ -11,7 +11,7 @@ $obs    =$_POST["Tobs"   ];
 if (isset($_POST['ID'])) 
 {
 	
-	mysql_query("UPDATE `cadastro` SET `nm_cadastro` = '$user', `tel_cadastro` = '$telefone', `end_cadastro` = '$endereco', `obs_cadastro` = '$obs' WHERE `cd_cadastro` = $ID");
+	mysqli_query($conexao,"UPDATE `cadastro` SET `nm_cadastro` = '$user', `tel_cadastro` = '$telefone', `end_cadastro` = '$endereco', `obs_cadastro` = '$obs' WHERE `cd_cadastro` = $ID");
  	echo"
 	<script>
 	alert('Atualizado com sucesso');
